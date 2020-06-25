@@ -1,0 +1,1 @@
+Simple project for printing system memory status for training purpose.
