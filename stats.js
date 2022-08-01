@@ -19,6 +19,7 @@ async function pcStats() {
             "percent_memory": `${percents}%`
         };
 
+        
         console.clear();
         console.log("========PC STATS=========");
         console.table(stats);
