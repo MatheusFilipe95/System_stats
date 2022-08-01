@@ -12,7 +12,7 @@ function sleep(ms) {
 
 async function pcStats() {
     while(1){
-        await sleep(7500);
+        await sleep(5000);
         const stats = {
             "free_memory": `${mem} MB`,
             "total_memory": `${total} MB`,
