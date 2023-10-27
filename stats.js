@@ -31,23 +31,16 @@ async function pcStats() {
 };
 
 
-
+// Função que representa a curva
 function curve(x) {
   return x ** 2; 
 }
 
+// Função para calcular a derivada
 function calculateDerivative(x) {
-  return Flux.just(x) 
-    .map(value => (f(value + 0.0001) - f(value)) / 0.0001) 
-    .next(); 
+  return Flux.just(x) // Crie um fluxo com o valor de x
+    .map(value => (f(value + 0.0001) - f(value)) / 0.0001) // Aproximação da derivada
+    .next(); // Obtenha o valor calculado
 }
-
-
-const xValue = 2;
-
-calculateDerivative(xValue)
-  .subscribe(result => {
-    console.log(` the value of f(${xValue}) is: ${result}`);
-  });
 
 pcStats();
